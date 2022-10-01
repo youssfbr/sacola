@@ -22,8 +22,8 @@ public class Sacola {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     private Cliente cliente;
 
     @OneToMany(cascade = CascadeType.ALL)
